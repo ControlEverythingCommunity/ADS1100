@@ -22,7 +22,6 @@ void main()
 	}
 	// Get I2C device, ADS1100 I2C address is 0x48(72)
 	ioctl(file, I2C_SLAVE, 0x48);
-	
 
 	// Select configuration register
 	// Continuous conversion mode, 8 SPS, 1 PGA(0x0C)
