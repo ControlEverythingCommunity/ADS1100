@@ -24,7 +24,7 @@ void setup()
 
   // Start I2C Transmission
   Wire.beginTransmission(Addr);
-  // Continuous conversion mode, 8 SPS
+  // Continuous conversion mode, 8 SPS, 1PGA
   Wire.write(0x8C);
   // Stop I2C Transmission
   Wire.endTransmission();
@@ -52,6 +52,7 @@ void loop()
   {
     raw_adc -= 65536;
   }
+  
   // Output data to dashboard
   Particle.publish("Digital value of analog input :", String(raw_adc));
   delay(500);
