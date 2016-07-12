@@ -25,7 +25,7 @@ void setup()
   // Start I2C Transmission
   Wire.beginTransmission(Addr);
   // Continuous conversion mode, 8 SPS, 1PGA
-  Wire.write(0x8C);
+  Wire.write(0x0C);
   // Stop I2C Transmission
   Wire.endTransmission();
   delay(300);
