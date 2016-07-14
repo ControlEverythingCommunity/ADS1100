@@ -48,7 +48,7 @@ void loop()
   }
 
   // Output data to serial monitor
-  Serial.print("Digital value of analog input : ");
+  Serial.print("Digital Value of Analog Input : ");
   Serial.println(raw_adc);
   delay(500);
 }
