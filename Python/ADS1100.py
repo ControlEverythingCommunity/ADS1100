@@ -28,4 +28,4 @@ if raw_adc > 32767 :
 	raw_adc -= 65536
 
 # Output data to screen
-print "Digital output of analog input : %d " %raw_adc
+print "Digital Value of Analog Input : %d " %raw_adc
