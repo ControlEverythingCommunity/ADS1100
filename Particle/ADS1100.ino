@@ -34,7 +34,13 @@ void setup()
 void loop()
 {
   unsigned int data[2];
-
+  
+  // Start I2C Transmission
+  Wire.beginTransmission(Addr);
+  // Stop I2C Transmission
+  Wire.endTransmission();
+  delay(300);
+  
   // Request 2 bytes of data
   Wire.requestFrom(Addr, 2);
 
@@ -54,6 +60,6 @@ void loop()
   }
   
   // Output data to dashboard
-  Particle.publish("Digital value of analog input :", String(raw_adc));
+  Particle.publish("Digital Value of Analog Input :", String(raw_adc));
   delay(500);
 }
